@@ -44,6 +44,12 @@ class ArticleController extends Controller
     
         $article->save();
         return redirect('/Ajouter')->with('status', 'L\'article a bien été ajouté avec succès');
+        
+    } public function liste_article(){
+        $articles= Article ::All();
+       return view('mes_articles.liste',compact('articles'));
     }
+
+
 
 }

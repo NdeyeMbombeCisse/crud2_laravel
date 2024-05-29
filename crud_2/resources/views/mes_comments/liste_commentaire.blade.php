@@ -11,7 +11,7 @@
         <div class="row">
           <div class="col">
             <h1> liste des commentaires</h1>
-            <a href="/Ajouter" class="btn btn-primary">Ajouter un article</a> <br> <br>
+            <a href="Ajout_comments" class="btn btn-primary">Ajouter un commentaire</a> <br> <br>
             <table class="table">
                 <thead>
                     @foreach ($comments as $comment)
@@ -34,7 +34,7 @@
                     <td> {{ $comment->articles_id }}</td>
                     <td>
                         <a href="#" class = "btn btn-info">update</a>
-                        <a href="#" class = "btn btn-danger">Delet</a>
+                    <a href="delete_comments/{{ $comment->id }}" class = "btn btn-danger">Delet</a>
                     </td>
                   </tr>
                   @endforeach

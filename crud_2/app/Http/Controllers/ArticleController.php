@@ -139,6 +139,14 @@ public function liste_commenatire(){
     return view('mes_comments.liste_commentaire',compact('comments'));
 }
 
+public function delete_commenttaire($id){
+    $comment= Comment::find($id);
+    $comment->delete();
+    return redirect('list_comments')->with('status', 'L\'article a bien été supprimer avec succes avec succès');
+   
+
+}
+
 
 
 

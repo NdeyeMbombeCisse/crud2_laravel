@@ -146,6 +146,37 @@ public function delete_commenttaire($id){
    
 
 }
+public function update_commentaire($id){
+
+
+    $comments = Comment::findOrFail($id);
+    $articles = Article::all(); // Récupérer tous les articles
+    return view('mes_comments.update_commentaire', compact('comments', 'articles'));
+
+}
+
+public function comments_update(Request $request,$id){
+    $request->validate([
+
+        'contenu'=> 'required',
+        'auteur'=>'required',
+        'date_heure_creation'=>'required',
+        'articles_id'=>'required',
+
+
+    ]);
+
+    $comment =  Comment::find($id);
+    $comment->contenu= $request-> contenu;
+    $comment->auteur= $request-> auteur;
+    $comment->date_heure_creation= $request-> date_heure_creation;
+    $comment->articles_id= $request-> articles_id;
+
+    $comment->update();
+    return redirect('Ajout_comments')->with('status', 'L\'article a bien été modifier avec succes avec succès');
+   
+
+}
 
 
 

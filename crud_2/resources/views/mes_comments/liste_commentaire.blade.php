@@ -12,9 +12,11 @@
           <div class="col">
             <h1> liste des commentaires</h1>
             <a href="Ajout_comments" class="btn btn-primary">Ajouter un commentaire</a> <br> <br>
+            <a href="Affichage" class="btn btn-primary">Liste des articles</a> <br> <br>
             <table class="table">
+                
                 <thead>
-                    @foreach ($comments as $comment)
+                   
                         
                   <tr>
                     <th scope="col">#</th>
@@ -26,6 +28,7 @@
                   </tr>
                 </thead>
                 <tbody>
+                    @foreach ($comments as $comment)
                   <tr>
                     <td>{{ $comment->id }}</td>
                     <td>{{ $comment->contenu }}</td>
@@ -33,7 +36,7 @@
                     <td>{{ $comment->date_heure_creation }}</td>
                     <td> {{ $comment->articles_id }}</td>
                     <td>
-                        <a href="#" class = "btn btn-info">update</a>
+                        <a href="comments_update/{{ $comment->id }}" class = "btn btn-info">update</a>
                     <a href="delete_comments/{{ $comment->id }}" class = "btn btn-danger">Delet</a>
                     </td>
                   </tr>

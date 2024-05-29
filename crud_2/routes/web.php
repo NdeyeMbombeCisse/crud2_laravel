@@ -16,3 +16,5 @@ Route::get('Ajout_comments', [ArticleController::class,'ajouter_commentaire']);
 Route::post('comments/traitement',[ArticleController::class,'comments_traitement']);
 Route::get('list_comments', [ArticleController::class,'liste_commenatire']);
 Route::get('delete_comments/{id}' , [ArticleController::class, 'delete_commenttaire']);
+Route::get('comments_update/{id}', [ArticleController::class,'update_commentaire']);
+Route::post('comments_update/{id}',[ArticleController::class,'comments_update']);

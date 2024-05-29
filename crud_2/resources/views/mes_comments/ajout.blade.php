@@ -10,7 +10,7 @@
     <div class="container ">
         <div class="row">
           <div class="col">
-            <h1> Ajouter des articles</h1>
+            <h1> Ajouter des commenatires</h1>
             @if(session ('status'))
             <div class="alert alert-success">
                 {{ session ('status') }}

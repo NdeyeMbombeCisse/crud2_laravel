@@ -28,7 +28,7 @@
                    <a href="update_article/{{ $article -> id }}" class="btn btn-primary">modifier</a> 
                    <a href="delete_article/ {{ $article -> id }}" class="btn btn-danger">Supprimer</a> 
                    <a href="detail" class="btn btn-primary">Detail</a> 
-                   <a href="#" class="btn btn-primary btn-top" btn-top>Voir les commentaires</a> 
+                   <a href="list_comments" class="btn btn-primary btn-top" btn-top>Voir les commentaires</a> 
                 
 
 

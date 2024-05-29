@@ -11,3 +11,6 @@ Route::get('update_article/{id}' , [ArticleController::class, 'update_article'])
 Route::post('update_article/{id}' , [ArticleController::class, 'update_traitement']);
 Route::get('delete_article/{id}' , [ArticleController::class, 'delete_article']);
 Route::get('detail' , [ArticleController::class, 'detail_article']);
+// partie comentaire
+Route::get('Ajout_comments', [ArticleController::class,'ajouter_commentaire']);
+Route::post('comments/traitement',[ArticleController::class,'comments_traitement']);

@@ -56,64 +56,32 @@ class ArticleController extends Controller
     }
     
     public function update_traitement(Request $request, $id){
-         // Valider les données du formulaire
-        //  $request->validate([
-        //     'image' => 'required', 
-        //     'nom' => 'required',
-        //     'desc' => 'required',
-        //     'date_creation' => 'required',
-        //      'a_la_une' => 'required',
-        // ]);
-    
-        
-        // //  if ($request->hasFile('image')) {
-        // //     $imagePath = $request->file('image')->store('images', 'public');
-            
-        // //  }
-    
-    
-        // // Créer un nouvel article avec les données du formulaire
-        // $article =  Article::find($id);
-        // $article->image = $request-> image;// Attribuez le chemin de l'image à la propriété 'image'
-        // $article->nom = $request->nom;
-        // $article->desc = $request->desc;
-        // $article->date_creation = $request->date_creation;
-        // $article->a_la_une = $request->a_la_une;
-        // $article->update();
-        
-        // return redirect('Affichage')->with('status', 'L\'article a bien été modifi avec succès');
-
-
-         // Valider les données du formulaire
-         $request->validate([
+        //   Valider les données du formulaire
+          $request->validate([
             'image' => 'required', 
-           'nom' => 'required',
-           'desc' => 'required',
-           'date_creation' => 'required',
-            'a_la_une' => 'required',
-       ]);
-   
-       
-   
-       // if ($request->hasFile('image')) {
-       //     $imagePath = $request->file('image')->store('images', 'public');
-           
-       // }
-   
-   
-       
-   
-       // Créer un nouvel article avec les données du formulaire
-       $article =  Article::find($id);
-       $article->image = $request-> image;// Attribuez le chemin de l'image à la propriété 'image'
-        $article->nom = $request->nom;
-        $article->desc = $request->desc;
-        $article->date_creation = $request->date_creation;
-        $article->a_la_une = $request->a_la_une;
+             'nom' => 'required',
+             'desc' => 'required',
+             'date_creation' => 'required',
+              'a_la_une' => 'required',
+         ]);
     
-   
-       $article->update();
-       return redirect('/Ajouter')->with('status', 'L\'article a bien été ajouté avec succès');
+        
+        // // /  if ($request->hasFile('image')) {
+        //      $imagePath = $request->file('image')->store('images', 'public');
+        //      }
+    
+    
+        //  Créer un nouvel article avec les données du formulaire
+     $article =  Article::find($id);
+         $article->image = $request-> image;// Attribuez le chemin de l'image à la propriété 'image'
+         $article->nom = $request->nom;
+         $article->desc = $request->desc;
+         $article->date_creation = $request->date_creation;
+         $article->a_la_une = $request->a_la_une;
+         $article->update();
+        
+     return redirect('Affichage')->with('status', 'L\'article a bien été modifi avec succès');
+
 
 
         

@@ -133,6 +133,11 @@ public function comments_traitement(Request $request){
 
 
 }
+public function liste_commenatire(){
+    $comments= Comment::All();
+    // $comments = Comment::with('article')->get();
+    return view('mes_comments.liste_commentaire',compact('comments'));
+}
 
 
 

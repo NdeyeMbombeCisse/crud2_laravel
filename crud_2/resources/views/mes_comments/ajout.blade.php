@@ -46,7 +46,7 @@
                   </div>
                   
                 <button type="Soumettre" class="btn btn-primary">Soumettre</button>
-                <a href="Affichage"  class="btn btn-danger"> voir la liste</a>
+                <a href="list_comments"  class="btn btn-danger"> voir la liste</a>
               </form>
           </div>
         </div>

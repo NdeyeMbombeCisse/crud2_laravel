@@ -14,3 +14,4 @@ Route::get('detail' , [ArticleController::class, 'detail_article']);
 // partie comentaire
 Route::get('Ajout_comments', [ArticleController::class,'ajouter_commentaire']);
 Route::post('comments/traitement',[ArticleController::class,'comments_traitement']);
+Route::get('list_comments', [ArticleController::class,'liste_commenatire']);
